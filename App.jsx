@@ -5,7 +5,7 @@ import data from './data';
 
 export default function App() {
 	const places = data.map((item) => {
-		return <PlaceBox {...item} />;
+		return <PlaceBox key={item.id} {...item} />;
 	});
 
 	return (

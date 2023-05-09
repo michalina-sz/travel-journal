@@ -1,3 +1,8 @@
+:root {
+	/* --accent-color: #645af5; */
+	--accent-color: #f55a5a;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -14,13 +19,140 @@ nav {
 	align-items: center;
 	height: 60px;
 	width: 100%;
-  font-size: 25px;
-	background-color: #645af5;
+	font-size: 25px;
+	background-color: var(--accent-color);
 	color: #fff;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 40px;
+}
+
 .nav--title {
-  margin-left: 7px;
-  font-size: 16px;
-  font-weight: 500;
+	margin-left: 7px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.placebox {
+	display: flex;
+	margin-top: 36px;
+}
+
+.placebox--img {
+	width: 125px;
+	height: 168px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.placebox--place-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 360px;
+	margin-left: 20px;
+	font-size: 10px;
+}
+
+.placebox--location {
+	display: flex;
+	align-items: center;
+
+}
+
+.placebox--location i {
+	color: var(--accent-color);
+}
+
+.placebox--location p {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0 12px 0 4px;
+}
+
+.placebox--location a {
+	color: #918E9B;
+}
+
+.placebox--location a:hover {
+	color: #b2afbd;
+}
+.placebox--title {
+	margin: 5px 0;
+	font-size: 25px;
+}
+
+.placebox--date {
+	margin: 10px 0;
+	font-weight: bold;
+}
+
+@media (max-width: 350px) {
+	.placebox--description {
+		max-height: 55px;
+		overflow: scroll;
+	}
+	.placebox--location {
+		margin-bottom: 5px;
+	}
+	.placebox--location a {
+		font-size: 8px;
+	}
+	.placebox--title {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 576px) {
+	main {
+		padding: 0px 20px;
+		margin-bottom: 40px;
+	}
+	.placebox--description {
+		max-height: 55px;
+		overflow: scroll;
+	}
+}
+
+@media (min-width: 768px) {
+	.placebox {
+		margin-top: 50px;
+	}
+	.placebox--img {
+		width: 225px;
+		height: 302px;
+	}
+	.placebox--place-info {
+		font-size: 14px;
+		margin-left: 30px;
+	}
+	.placebox--title {
+		font-size: 27px;
+		margin: 10px 0;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.placebox--img {
+		width: 300px;
+		height: 369px;
+	}
+	.placebox--place-info {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.placebox--img {
+		width: 300px;
+		height: 369px;
+	}
+	.placebox--place-info {
+		font-size: 15px;
+	}
 }
